@@ -1,1 +1,0 @@
-This repository consists of html 5 and css 3 examples.
