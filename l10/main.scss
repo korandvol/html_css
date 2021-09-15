@@ -1,0 +1,154 @@
+@import'style/base';
+@import 'style/mixin';
+body{
+    background-color: rgb(204, 30, 7);
+    
+}
+
+.menu{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(5, 30, 255);
+    margin-top: 200px;
+    display: flex;
+    justify-content: flex-start;
+    &-corn1{
+        width: 7%;
+        height: 200px;
+        background-color: rgb(0, 153, 255);
+        background-image: url(image/twitter-square-brands.svg);
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: flex-start;
+        transition-property: width;
+        transition: width 0.1s ease-out 0.1s;
+        &-head1{
+            width: 0;
+            height: 200px;
+            background-color: rgb(0, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: width;
+            transition: width 0.1s ease-out 0.1s;
+            &-image{
+                height: 50px;
+                width: 0;
+                filter: brightness(0) invert(1);
+                transition-property: width;
+                transition: width 0.1s ease-out 0.1s;
+            }
+        }
+        &-description1{
+            width: 0;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            transition-property: width;
+            transition: width 0.1s ease-out 0.1s;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transition: .100s opacity, .100s visibility;
+            padding: 20px;
+            &-title{
+                margin-top: 10px;
+                font-size: 53px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            &-information{
+                margin-top: 5px;
+                font-size: 16;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 20px;
+
+            }
+        }
+        
+    }
+    &-corn1:hover {
+        width: 400px;
+    }
+    &-corn1:hover .menu-corn1-head1-image{
+        width: 50px;
+    }
+    &-corn1:hover .menu-corn1-head1{
+        width: 100px;
+        transform-origin: right width;
+    }
+    &-corn1:hover .menu-corn1-description1{
+        opacity: 1;
+        visibility: visible;
+        width: 300px;
+    }
+    &-corn2{
+        @extend .menu-corn1;
+        background-image: url(image/facebook-f-brands.svg);
+        &-head2{
+            @extend .menu-corn1-head1;
+            background-color: rgb(6, 23, 175);
+            
+        }
+        &-description2{
+            @extend .menu-corn1-description1;
+        }
+    }
+    &-corn3{
+        @extend .menu-corn1;
+        background-image: url(image/linkedin-in-brands.svg);
+        &-head3{
+            @extend .menu-corn1-head1;
+            background-color: rgb(8, 28, 209);
+        }
+        &-description3{
+            @extend .menu-corn1-description1;
+        }
+    }
+    &-corn4{
+        @extend .menu-corn1;
+        background-image: url(image/instagram-brands.svg);
+        &-head4{
+            @extend .menu-corn1-head1;
+            background-color: rgb(9, 128, 15);
+        }
+        &-description4{
+            @extend .menu-corn1-description1;
+        }
+    }
+    &-corn5{
+        @extend .menu-corn1;
+        background-image: url(image/youtube-brands.svg);
+        &-head5{
+            @extend .menu-corn1-head1;
+            background-color: rgb(214, 28, 28);
+        }
+        &-description5{
+            @extend .menu-corn1-description1;
+        }
+    }
+    &-corn6{
+        @extend .menu-corn1;
+        background-image: url(image/tumblr-brands.svg);
+        &-head6{
+            @extend .menu-corn1-head1;
+            background-color: rgb(21, 2, 126);
+        }
+        &-description6{
+            @extend .menu-corn1-description1;
+        }
+    }
+    &-corn7{
+        @extend .menu-corn1;
+        background-image: url(image/dribbble-brands.svg);
+        &-head7{
+            @extend .menu-corn1-head1;
+            background-color: rgb(219, 62, 122);
+        }
+        &-description7{
+            @extend .menu-corn1-description1;
+        }
+    }
+
+}
